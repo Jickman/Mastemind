@@ -2,8 +2,6 @@ import random
 
 difficulties = ['easy', 'normal', 'hard']
 
-valid_difficulty = False
-
 difficulty = ''
 correct_number = ''
 guess_number = 0
@@ -18,6 +16,8 @@ Difficulties:
     Hard: Number length = 3 (guesses are limited to 7!)""")
 
 while not valid_difficulty:
+    valid_difficulty = False
+    
     difficulty = input('Difficulty: ')
     if difficulty in difficulties:
         valid_difficulty = True
