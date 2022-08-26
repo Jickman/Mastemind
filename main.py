@@ -82,7 +82,7 @@ def checking_correct_digits():
 
 while guess_number <= maximum_guesses:
     guess_number += 1
-    correct_digits = checking_correct_digits()
+    result = checking_correct_digits()
     if correct_digits == guess_length:
         winning_the_game()
         break
@@ -90,5 +90,5 @@ while guess_number <= maximum_guesses:
         losing_the_game()
         break
     else:
-        print("Common digits: {}.".format(correct_digits))
+        print("Common digits: {}.".format(result))
         continue
