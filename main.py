@@ -56,11 +56,11 @@ def easy_game():
     length = len(correct_digit_positions)
 
     if length == 0:
-        return 'There are not correct digits.'
+        print('There are not correct digits.')
     elif length == 1:
-        return f'Correct digit location: {correct_digit_positions}'
+        print(f'Correct digit location: {correct_digit_positions}')
     elif length == 2:
-        return f'Correct digit location: {correct_digit_positions[0]} and {correct_digit_positions[1]}'
+        print(f'Correct digit location: {correct_digit_positions[0]} and {correct_digit_positions[1]}')
     else:
         return True
 
@@ -133,22 +133,18 @@ while guess_number <= maximum_guesses:
     guess_number += 1
     if difficulty == 'very easy':
         easy_game_guess = check_guess()
-        print(easy_game())
-
+        easy_game()
         if easy_game():
             winning_the_game()
             break
-
     else:
         common_digits = checking_correct_digits()
         if common_digits == guess_length:
             winning_the_game()
             break
-
         elif guess_number > maximum_guesses:
             losing_the_game()
             break
-
         else:
             print(f"Common digits: {common_digits}.")
             continue
