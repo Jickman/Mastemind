@@ -41,7 +41,7 @@ def random_number_selection(upper_bound):
 # variable, then formats an output according to its length.
 
 def easy_game():
-    def check_easy_guess():
+    def checking_easy_digits():
         i = 0
         positions = ''
         while i < guess_length:
@@ -50,8 +50,8 @@ def easy_game():
             i += 1
         return positions
 
-    check_easy_guess()
-    correct_digit_positions = check_easy_guess()
+    checking_easy_digits()
+    correct_digit_positions = checking_easy_digits()
 
     length = len(correct_digit_positions)
 
