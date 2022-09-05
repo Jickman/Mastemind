@@ -113,6 +113,8 @@ if difficulty == 'hard':
     maximum_guesses = 7
     guess_length = 3
 
+#print(correct_number)
+
 
 # Sets a result variable to 0 and iterates over both the player's guess and the correct number, returning the
 # number of common digits.
@@ -167,3 +169,17 @@ while guess_number <= maximum_guesses:
         else:
             print(f"Common digits: {common_digits}.")
             continue
+
+# Appends both name and score to Leaderboard and prints its contents.
+
+if difficulty == 'mastermind':
+
+    name = input("\n\nWhat is your name (else, type 'no')? ")
+    if name == 'no':
+        print('I see you value your privacy.')
+        name = 'unknown'
+
+    with open('Leaderboard.txt', 'a+') as f_append:
+        f_append.write(f'\n  {name}      {guess_number}')
+    with open('Leaderboard.txt', 'r') as f_read:
+        print(f_read.read())
